@@ -16,7 +16,7 @@ class Admin(db.Model, UserMixin):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     username: Mapped[str] = mapped_column(String(20))
-    password_hash: Mapped[str] = mapped_column(String(128))
+    password_hash: Mapped[str] = mapped_column(String(255))
     blog_title: Mapped[str] = mapped_column(String(60))
     blog_sub_title: Mapped[str] = mapped_column(String(100))
     name: Mapped[str] = mapped_column(String(30))

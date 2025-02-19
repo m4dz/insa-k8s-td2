@@ -21,7 +21,7 @@ def upgrade():
     op.create_table('admin',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('username', sa.String(length=20), nullable=False),
-    sa.Column('password_hash', sa.String(length=128), nullable=False),
+    sa.Column('password_hash', sa.String(length=255), nullable=False),
     sa.Column('blog_title', sa.String(length=60), nullable=False),
     sa.Column('blog_sub_title', sa.String(length=100), nullable=False),
     sa.Column('name', sa.String(length=30), nullable=False),
